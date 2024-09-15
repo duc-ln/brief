@@ -56,10 +56,6 @@
 				}
 			]
 		},
-		"layout": {
-			"contentSize": "650px",
-			"wideSize": "1200px"
-		},
 		"spacing": {
 			"spacingScale": {
 				"steps": 0
@@ -699,13 +695,7 @@
 			}
 		},
 		"spacing": {
-			"blockGap": "1.5rem",
-			"padding": {
-				"top": "var(--wp--preset--spacing--40)",
-				"right": "var(--wp--preset--spacing--30)",
-				"bottom": "var(--wp--preset--spacing--40)",
-				"left": "var(--wp--preset--spacing--30)"
-			}
+			"blockGap": "1.5rem"
 		},
 		"typography": {
 			"fontFamily": "var(--wp--preset--font-family--poppins)",

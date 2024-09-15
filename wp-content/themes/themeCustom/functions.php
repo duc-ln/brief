@@ -12,6 +12,7 @@ function theme_custom_styles () {
 	// Register styles
 	wp_enqueue_style('theme-custom-style', get_stylesheet_uri(), array(), wp_get_theme()->get('Version'));
 	wp_enqueue_style('theme-custom-style-blocks', get_template_directory_uri().'/assets/css/blocks.css');
+	wp_enqueue_script('custom-modal-script', get_template_directory_uri() . '/assets/js/blocks.js');
 }
 endif;
 add_action('wp_enqueue_scripts', 'theme_custom_styles'); 
