@@ -8,6 +8,7 @@
     --max-width-header: 1570px;
     --max-width-content: 1400px;
     --padding-content: 20px;
+    --grid-gap-content: 20px;
 
     @media (max-width: 600px) {
         --padding-content: 15px;
