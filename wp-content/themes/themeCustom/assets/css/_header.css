@@ -1,0 +1,21 @@
+header {
+    width: 100%;
+    background-color: transparent;
+    transition: background-color linear 0.1s;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    #header {
+        width: 100%;
+        max-width: var(--max-width-header);
+        padding: 24px var(--padding-content);
+    }
+
+    &.active {
+        background-color: white;
+    }
+}
