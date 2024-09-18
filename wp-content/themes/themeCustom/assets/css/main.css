@@ -1,0 +1,26 @@
+@import "./_initial.css";
+
+/* start common */
+@import "./_header.css";
+@import "./_navigation.css";
+@import "./_footer.css";
+/* end common */
+
+/* start the home page block */
+@import "./_our-client.css";
+/* start the home page block */
+
+/* start the service page block */
+/* start the service page block */
+
+/* start the project page block */
+/* start the project page block */
+
+/* start the about page block */
+/* start the about page block */
+
+/* start the contact page block */
+/* start the contact page block */
+
+/* start the not found page block */
+/* start the not found page block */
