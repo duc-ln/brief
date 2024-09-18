@@ -4,24 +4,17 @@
 	"customTemplates": [
 		{
 			"name": "blank",
-			"postTypes": [
-				"page",
-				"post"
-			],
+			"postTypes": ["page", "post"],
 			"title": "Blank"
 		},
 		{
 			"name": "blog-alternative",
-			"postTypes": [
-				"page"
-			],
+			"postTypes": ["page"],
 			"title": "Blog (Alternative)"
 		},
 		{
 			"name": "404",
-			"postTypes": [
-				"page"
-			],
+			"postTypes": ["page"],
 			"title": "404"
 		}
 	],
@@ -528,18 +521,12 @@
 					"name": "6"
 				}
 			],
-			"units": [
-				"%",
-				"px",
-				"em",
-				"rem",
-				"vh",
-				"vw"
-			]
+			"units": ["%", "px", "em", "rem", "vh", "vw"]
 		},
 		"typography": {
 			"dropCap": false,
 			"fluid": true,
+			"fontWeight": true,
 			"fontFamilies": [
 				{
 					"fontFamily": "'Poppins', sans-serif",
@@ -1189,6 +1176,16 @@
 			"area": "uncategorized",
 			"name": "post-meta",
 			"title": "Post Meta"
+		},
+		{
+			"area": "uncategorized",
+			"name": "can-scroll-down-button",
+			"title": "Can scroll down button"
+		},
+		{
+			"area": "uncategorized",
+			"name": "our-services",
+			"title": "Our services"
 		}
 	]
 }

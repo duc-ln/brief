@@ -1,26 +1,32 @@
 :root {
-    /* screen 
+	/* screen 
     - screen mobile max-width: 600px;
     - screen table max-width: 1023px;
     */
 
-    /* variable */
-    --max-width-header: 1570px;
-    --max-width-content: 1400px;
-    --padding-content: 20px;
-    --grid-gap-content: 20px;
+	/* variable */
+	--max-width-header: 1570px;
+	--max-width-content: 1400px;
+	--padding-content: 20px;
+	--grid-gap-content: 20px;
 
-    @media (max-width: 600px) {
-        --padding-content: 15px;
-    }
+	@media (max-width: 600px) {
+		--padding-content: 15px;
+	}
 }
 
 html {
-    font-size: 18px;
+	font-size: 18px;
 
-    .container {
-        max-width: var(--max-width-content);
-        padding-inline: var(--padding-content);
-        margin-inline: auto;
+	.container {
+		max-width: var(--max-width-content);
+		padding-inline: var(--padding-content);
+		margin-inline: auto;
+	}
+
+    .wp-site-blocks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
