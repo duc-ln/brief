@@ -33,15 +33,15 @@ const Modules = {
 	},
 	handleScrollHeader() {
 		try {
-			const elementScroll = document.querySelector("body");
+			const elementScroll = document.body;
 			const headerEl = document.querySelector("header");
 
 			const canScrollDownButtonEl = document.querySelector(
 				"#can-scroll-down-button",
 			);
 			if (elementScroll) {
-				elementScroll.onscroll = (e) => {
-					const offsetTop = window.pageYOffset;
+				elementScroll.addEventListener("scroll", (e) => {
+					const offsetTop = e.target.scrollTop;	
 					if (offsetTop === 0) headerEl.classList.remove("active");
 					if (offsetTop > 0) headerEl.classList.add("active");
 
@@ -52,11 +52,10 @@ const Modules = {
 						document.body.scrollTop;
 					const clientHeight = document.documentElement.clientHeight;
 					const scrollHeight = document.documentElement.scrollHeight;
-
 					if (scrollTop + clientHeight >= scrollHeight)
 						canScrollDownButtonEl.classList.add("unactive");
 					else canScrollDownButtonEl.classList.remove("unactive");
-				};
+				});
 			}
 		} catch (error) {
 			console.log("handleScrollHeader: ", error);
