@@ -31,8 +31,17 @@
 		overflow: hidden;
 		background-size: 100% 100%;
 		background-position: center;
-		figure {
-			opacity: 0;
+		background-image: unset !important;
+
+		.our-services-first-row {
+			.our-services-first-row-item {
+				animation: showAnimation ease-in-out 0.3s;
+				display: none;
+
+				&.active {
+					display: block;
+				}
+			}
 		}
 	}
 

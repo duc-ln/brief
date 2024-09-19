@@ -1,5 +1,34 @@
+class Helpers {
+	static changeWhenHover(targetHoverSelector, targetChangeSelector) {
+		const hoverElements = document.querySelectorAll(targetHoverSelector);
+		const changeElements = document.querySelectorAll(targetChangeSelector);
+
+		changeElements[0].classList.add("active");
+
+		function removeAllActive(elments) {
+			elments.forEach((el) => el.classList.remove("active"));
+		}
+		hoverElements.forEach((hoverElement, index) => {
+			hoverElement.onmouseover = () => {
+				removeAllActive(changeElements);
+				if (changeElements[index])
+					changeElements[index].classList.add("active");
+			};
+
+			hoverElement.onmouseout = () => {
+				removeAllActive(changeElements);
+				changeElements[0].classList.add("active");
+			};
+		});
+	}
+}
+
 const Modules = {
 	onInt() {
+		Helpers.changeWhenHover(
+			".our-services-item-title",
+			".our-services-first-row .our-services-first-row-item",
+		);
 		this.handleScrollHeader();
 	},
 	handleScrollHeader() {
