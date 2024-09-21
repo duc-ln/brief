@@ -1,0 +1,139 @@
+#faq {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+
+	.faq-main {
+		width: 100%;
+		max-width: var(--max-width-content);
+		padding: 0 var(--padding-content);
+
+		.faq-main__title {
+			line-height: 72px;
+			margin-bottom: 16px;
+		}
+
+		.faq-item__content-first {
+			display: flex;
+			flex-direction: column;
+			row-gap: 12px;
+
+			.faq-item__title-grid:nth-child(1) .faq-item__content-title {
+				&::after {
+					display: none;
+				}
+
+				margin-top: 0 !important;
+			}
+		}
+
+		@media (max-width: 1439px) {
+			.faq-item__content-first {
+				grid-column: span 12;
+
+				.faq-item__title-grid.active .faq-item__content-image {
+					display: block !important;
+				}
+			}
+
+			.faq-image-desktop {
+				display: none;
+			}
+		}
+
+		@media (max-width: 600px) {
+			.faq-item__content-first {
+				grid-column: span 12;
+
+				.faq-item__title-grid.active {
+					.faq-item__content-image {
+						display: block !important;
+					}
+				}
+			}
+
+			.faq-image-desktop {
+				display: none;
+			}
+		}
+
+		.faq-item__title-grid {
+			margin-block-start: 0 !important;
+			column-gap: var(--grid-gap-content);
+
+			.faq-item__content-image {
+				display: none;
+
+				figure,
+				img {
+					width: 100% !important;
+					height: 100%;
+					vertical-align: unset;
+				}
+			}
+
+			.faq-item__content-infomation {
+				gap: 0;
+			}
+
+			.faq-item__content-title {
+				min-height: 36px;
+				margin: 12px 0;
+				cursor: pointer;
+				position: relative;
+
+				&::after,
+				&::before {
+					content: "";
+					position: absolute;
+					left: 0;
+					right: 0;
+					width: 100%;
+					height: 0;
+					font-size: 20px;
+					border-bottom: 1px dashed #000;
+				}
+
+				&::after {
+					top: -12px;
+				}
+
+				&::before {
+					bottom: -12px;
+				}
+
+				h2 {
+					font-weight: 600;
+					line-height: 36px;
+				}
+
+				img,
+				figure {
+					max-height: 24px;
+					max-width: 24px;
+					vertical-align: unset;
+				}
+
+				figure {
+					transition: transform 0.3s linear;
+					transform: rotateX(0deg);
+				}
+
+				&.active figure {
+					transform: rotateX(180deg);
+				}
+			}
+
+			.faq-item__content-title.active ~ .faq-item__content-description {
+				display: block;
+			}
+
+			.faq-item__content-description {
+				display: none;
+				animation: showAnimation linear 0.5s;
+				margin-top: 12px;
+				line-height: 27px;
+			}
+		}
+	}
+}
