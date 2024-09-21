@@ -9,6 +9,7 @@
 		var(--height-background) - var(--size-item) / 2 -
 			var(--grid-gap-content)
 	);
+
 	@media (max-width: 1439px) {
 		--height-background: 600px;
 	}
@@ -19,6 +20,7 @@
 
 	@media (max-width: 700px) {
 		--height-background: 300px;
+		margin: 30px 0 !important;
 		padding-top: calc(var(--height-background) - var(--size-item) / 2);
 		.ourClient__cover {
 			min-height: unset;

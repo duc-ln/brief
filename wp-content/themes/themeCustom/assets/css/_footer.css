@@ -34,7 +34,7 @@ footer {
             border-radius: 5px;
             padding: 8px 24px;
             font-weight: 700;
-            line-height: 27px;
+            line-height: var(--line-height-s);
             color: #0a0a0a;
         }
     }
@@ -53,7 +53,7 @@ footer {
 
         p {
             font-weight: 600;
-            line-height: 27px;
+            line-height: var(--line-height-s);
         }
     }
 
@@ -66,7 +66,7 @@ footer {
     }
 
     &>p {
-        line-height: 27px;
+        line-height: var(--line-height-s);
         color: #737373;
         font-weight: 500;
     }

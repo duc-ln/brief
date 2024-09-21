@@ -85,10 +85,11 @@ const Modules = {
 			itemSelector: ".faq-item__title-grid",
 		});
 		this.handleScrollHeader();
+		AOS.init();
 	},
 	handleScrollHeader() {
 		try {
-			const elementScroll = document.body;
+			const elementScroll = window;
 			const headerEl = document.querySelector("header");
 
 			const canScrollDownButtonEl = document.querySelector(
@@ -96,20 +97,16 @@ const Modules = {
 			);
 			if (elementScroll) {
 				elementScroll.addEventListener("scroll", (e) => {
-					const offsetTop = e.target.scrollTop;
-					if (offsetTop === 0) headerEl.classList.remove("active");
-					if (offsetTop > 0) headerEl.classList.add("active");
-
-					// Handle display can scroll down button
-					const scrollTop =
-						window.pageYOffset ||
-						document.documentElement.scrollTop ||
-						document.body.scrollTop;
-					const clientHeight = document.documentElement.clientHeight;
-					const scrollHeight = document.documentElement.scrollHeight;
-					if (scrollTop + clientHeight >= scrollHeight)
+					const offsetTop = window.pageYOffset;
+					
+					if (offsetTop === 0) {
+						headerEl.classList.remove("active");
+						canScrollDownButtonEl.classList.remove("unactive");
+					}
+					if (offsetTop > 0) {
+						headerEl.classList.add("active");
 						canScrollDownButtonEl.classList.add("unactive");
-					else canScrollDownButtonEl.classList.remove("unactive");
+					}
 				});
 			}
 		} catch (error) {

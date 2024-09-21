@@ -11,9 +11,12 @@
 		column-gap: var(--grid-gap-content);
 	}
 
+	@media (max-width: 600px) {
+		margin: 30px 0 !important;
+	}
+
 	@media (max-width: 1023px) {
-		padding-top: 50px !important;
-		padding-bottom: 50px !important;
+		margin: 50px 0 !important;
 
 		.our-services-last {
 			grid-column: span 12;
@@ -52,7 +55,7 @@
 	}
 
 	.our-services-title {
-		line-height: 72px;
+		line-height: var(--line-height-max);
 	}
 
 	.our-services-last {
@@ -73,7 +76,7 @@
 			}
 
 			.our-services-item-title {
-				line-height: 36px;
+				line-height: var(--line-height-xl);
 				cursor: pointer;
 
 				a {

@@ -3,13 +3,18 @@
 	display: flex;
 	justify-content: center;
 
+    
+	@media (max-width: 600px) {
+		margin: 30px 0 !important;
+	}
+
 	.faq-main {
 		width: 100%;
 		max-width: var(--max-width-content);
 		padding: 0 var(--padding-content);
 
 		.faq-main__title {
-			line-height: 72px;
+			line-height: var(--line-height-max);
 			margin-bottom: 16px;
 		}
 
@@ -63,6 +68,7 @@
 
 			.faq-item__content-image {
 				display: none;
+				animation: showAnimation linear 0.5s;
 
 				figure,
 				img {
@@ -77,7 +83,7 @@
 			}
 
 			.faq-item__content-title {
-				min-height: 36px;
+				min-height: var(--line-height-xl);
 				margin: 12px 0;
 				cursor: pointer;
 				position: relative;
@@ -132,7 +138,7 @@
 				display: none;
 				animation: showAnimation linear 0.5s;
 				margin-top: 12px;
-				line-height: 27px;
+				line-height: var(--line-height-s);
 			}
 		}
 	}
