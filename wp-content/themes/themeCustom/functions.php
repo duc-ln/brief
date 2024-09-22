@@ -11,8 +11,8 @@ add_action('wp_enqueue_scripts', 'theme_custom_styles');
 
 if (!function_exists('theme_custom_editor_styles')):
     function theme_custom_editor_styles() {
-        wp_enqueue_style('theme-custom-editor-style', get_template_directory_uri() . '/assets/css/main.css', array(), wp_get_theme()->get('Version'));
+        add_editor_style('/assets/css/main.css', array(), wp_get_theme()->get('Version'));
     }
 endif;
-add_action('enqueue_block_editor_assets', 'theme_custom_editor_styles');
+add_action('admin_init', 'theme_custom_editor_styles');
 ?>
