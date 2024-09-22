@@ -774,8 +774,8 @@
 		},
 		{
 			"area": "uncategorized",
-			"name": "faq",
-			"title": "FAQ"
+			"name": "project-counter",
+			"title": "Project Counter"
 		}
 	]
 }

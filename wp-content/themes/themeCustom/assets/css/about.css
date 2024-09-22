@@ -1,0 +1,48 @@
+.about-banner {
+	gap: 0 !important;
+
+	.about-text_title {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		padding: 24px 48px;
+
+		strong {
+			max-width: var(--max-width-content);
+			line-height: var(--line-height-r);
+			text-align: center;
+		}
+
+		@media (max-width: 600px) {
+			padding: 15px;
+			strong {
+				font-size: var(--wp--preset--font-size--s);
+				line-height: var(--line-height-s);
+			}
+		}
+	}
+}
+
+.about-faq {
+	.faq-item__content-image {
+		gap: 0 !important;
+		.faq-item__content-child-pre-title {
+			line-height: var(--line-height-m) !important;
+		}
+
+		.faq-item__content-child-title {
+			line-height: var(--line-height-r) !important;
+		}
+
+		.faq-item__content-child-description {
+			line-height: var(--line-height-s) !important;
+		}
+
+		@media (max-width: 600px) {
+			.faq-item__content-child-title {
+				line-height: var(--line-height-xl) !important;
+				margin-bottom: 10px !important;
+			}
+		}
+	}
+}

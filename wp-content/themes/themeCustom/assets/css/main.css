@@ -20,6 +20,8 @@
 /* start the project page block */
 
 /* start the about page block */
+@import "./about.css";
+@import "./_project_counter.css";
 /* start the about page block */
 
 /* start the contact page block */
@@ -28,6 +30,6 @@
 /* start the not found page block */
 /* start the not found page block */
 
-:where(.wp-site-blocks)>* {
+:where(.wp-site-blocks) > * {
 	margin-block: 0 !important;
 }

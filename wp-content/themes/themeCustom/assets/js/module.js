@@ -6,7 +6,7 @@ class Helpers {
 		const [activeEvent, outEvent] = events;
 		const hoverElements = document.querySelectorAll(targetHoverSelector);
 		const changeElements = document.querySelectorAll(targetChangeSelector);
-		if (hoverElements.length <= 0 || changeElements.length <= 0) return
+		if (hoverElements.length <= 0 || changeElements.length <= 0) return;
 		changeElements[0].classList.add("active");
 
 		hoverElements.forEach((hoverElement, index) => {
@@ -40,10 +40,16 @@ class Helpers {
 		const destinationElement =
 			scopeElement.querySelector(destinationSelector);
 
-		if (itemElements.length <= 0 || activeElements.length <= 0 || imageElments.length <= 0 || !destinationElement) return
+		if (
+			itemElements.length <= 0 ||
+			activeElements.length <= 0 ||
+			imageElments.length <= 0 ||
+			!destinationElement
+		)
+			return;
 
 		function transalteImage(index) {
-			let imageEl = imageElments[index].cloneNode(true);
+			let imageEl = imageElments[index]?.cloneNode(true);
 			if (!imageEl) {
 				const noImageEl = document.createElement("p");
 				noImageEl.innerText = "No image";
@@ -100,14 +106,16 @@ const Modules = {
 			if (elementScroll) {
 				elementScroll.addEventListener("scroll", (e) => {
 					const offsetTop = window.pageYOffset;
-					
+
 					if (offsetTop === 0) {
 						if (headerEl) headerEl.classList.remove("active");
-						if (canScrollDownButtonEl) canScrollDownButtonEl.classList.remove("unactive");
+						if (canScrollDownButtonEl)
+							canScrollDownButtonEl.classList.remove("unactive");
 					}
 					if (offsetTop > 0) {
 						if (headerEl) headerEl.classList.add("active");
-						if (canScrollDownButtonEl) canScrollDownButtonEl.classList.add("unactive");
+						if (canScrollDownButtonEl)
+							canScrollDownButtonEl.classList.add("unactive");
 					}
 				});
 			}

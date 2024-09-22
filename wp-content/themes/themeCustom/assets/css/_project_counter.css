@@ -1,0 +1,42 @@
+#project-counter {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+
+	.project-counter__main {
+		width: 100%;
+		max-width: var(--max-width-content);
+		padding: 0 var(--padding-content);
+		gap: var(--grid-gap-content);
+
+		.project-counter__item {
+			gap: 0;
+
+			.project-counter__content {
+				line-height: 96px;
+			}
+
+			.project-counter__description {
+				line-height: var(--line-height-xl);
+			}
+
+			figure {
+				margin-bottom: 24px;
+			}
+		}
+
+		@media (max-width: 1023px) {
+			.project-counter__item {
+				grid-column: span 6;
+
+				figure {
+					margin-bottom: 10px;
+				}
+
+				.project-counter__content {
+					line-height: 60px;
+				}
+			}
+		}
+	}
+}

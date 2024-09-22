@@ -12,10 +12,11 @@
 	--grid-gap-content: 20px;
 
 	--line-height-s: 27px;
-	--line-height-m: auto;
+	--line-height-m: 30px;
 	--line-height-l: auto;
 	--line-height-xl: 36px;
 	--line-height-xxl: auto;
+	--line-height-r: 48px;
 	--line-height-max: 72px;
 
 	@media (max-width: 600px) {
