@@ -3,19 +3,19 @@
 	"version": 2,
 	"customTemplates": [
 		{
-			"name": "blank",
-			"postTypes": ["page", "post"],
-			"title": "Blank"
-		},
-		{
-			"name": "blog-alternative",
-			"postTypes": ["page"],
-			"title": "Blog (Alternative)"
-		},
-		{
 			"name": "404",
-			"postTypes": ["page"],
+			"postTypes": ["page", "my-cpt"],
 			"title": "404"
+		},
+		{
+			"name": "home-page",
+			"postTypes": ["page", "my-cpt"],
+			"title": "Home Page"
+		},
+		{
+			"name": "about",
+			"postTypes": ["page", "my-cpt"],
+			"title": "About Us"
 		}
 	],
 	"settings": {
@@ -298,6 +298,11 @@
 					"name": "XXL",
 					"slug": "xxl",
 					"size": "26px"
+				},
+				{
+					"name": "R",
+					"slug": "r",
+					"size": "32px"
 				},
 				{
 					"name": "Max",
