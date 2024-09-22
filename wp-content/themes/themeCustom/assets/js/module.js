@@ -2,6 +2,13 @@ class Helpers {
 	static removeAllActive(elments, removeClassName = "active") {
 		elments.forEach((el) => el.classList.remove(removeClassName));
 	}
+
+	static getViewWidth(maxWidth = true) {
+		const width = window.innerWidth;
+		if (maxWidth && width > 1400) return 1400;
+		return width;
+	}
+
 	static changeWhenEvent(targetHoverSelector, targetChangeSelector, events) {
 		const [activeEvent, outEvent] = events;
 		const hoverElements = document.querySelectorAll(targetHoverSelector);
@@ -76,6 +83,124 @@ class Helpers {
 			});
 		});
 	}
+
+	static handleSlider({
+		scopeSelector,
+		sliderSelector,
+		sliderItemSelector,
+		counterSelector,
+		counterItemClassName,
+	}) {
+		const scropElement = document.querySelector(scopeSelector);
+		if (!scropElement) return;
+		const sliderElement = scropElement.querySelector(sliderSelector);
+		if (!sliderElement) return;
+		const sliderItemElements =
+			sliderElement.querySelectorAll(sliderItemSelector);
+		const counterElement = scropElement.querySelector(counterSelector);
+		let showItemCount = 4;
+		const sliderWidth = Helpers.getViewWidth();
+		if (sliderWidth < 1023) showItemCount = 2;
+		else showItemCount = 4;
+		sliderElement.style.width = sliderWidth + "px";
+
+		sliderItemElements.forEach((sliderItemElement) => {
+			sliderItemElement.style.width = `${sliderWidth / showItemCount}px`;
+			sliderItemElement.style.minWidth = `${
+				sliderWidth / showItemCount
+			}px`;
+			sliderItemElement.style.maxWidth = `${
+				sliderWidth / showItemCount
+			}px`;
+			sliderItemElement.style.opacity = "1";
+		});
+
+		function renderCounter() {
+			sliderElement.scrollTo({
+				left: 0,
+			});
+			if (!counterElement) return;
+			const countSlider = Math.ceil(
+				sliderItemElements.length / showItemCount,
+			);
+
+			if (Number.isNaN(countSlider) || countSlider === 0) return;
+			const counterItemElements = [];
+			while (counterElement.firstChild) {
+				counterElement.removeChild(counterElement.firstChild);
+			}
+			for (let index = 0; index < countSlider; index++) {
+				const element = document.createElement("button");
+				if (index === 0) element.classList.add("active");
+				element.classList.add(counterItemClassName);
+				element.setAttribute("data-counter", index + 1);
+				counterElement.appendChild(element);
+				counterItemElements.push(element);
+			}
+
+			counterItemElements.forEach((element) => {
+				element.addEventListener("click", (e) => {
+					const indexConter = element.dataset.counter;
+					if (element.matches(".active")) return;
+					counterItemElements.forEach((el) =>
+						el.classList.remove("active"),
+					);
+					element.classList.add("active");
+					const startSliderShowIndex =
+						(indexConter - 1) * showItemCount;
+					let endSliderShowIndex = indexConter * showItemCount;
+					if (endSliderShowIndex > sliderItemElements.length - 1)
+						endSliderShowIndex = sliderItemElements.length - 1;
+
+					const sliderShowes = [...sliderItemElements].filter(
+						(_, index) => {
+							if (startSliderShowIndex === endSliderShowIndex)
+								return index === startSliderShowIndex;
+							return (
+								index >= startSliderShowIndex &&
+								index < endSliderShowIndex
+							);
+						},
+					);
+					const targetElement = sliderShowes[0];
+					const elementPosition =
+						targetElement.getBoundingClientRect().left;
+
+					const containerPosition =
+						sliderElement.getBoundingClientRect().left;
+					const scrollPosition =
+						sliderElement.scrollLeft +
+						(elementPosition - containerPosition);
+
+					sliderElement.scrollTo({
+						behavior: "smooth",
+						left: scrollPosition,
+					});
+				});
+			});
+		}
+
+		renderCounter();
+
+		window.addEventListener("resize", (e) => {
+			const sliderWidth = Helpers.getViewWidth();
+			if (sliderWidth < 1023) showItemCount = 2;
+			else showItemCount = 4;
+			sliderElement.style.width = sliderWidth + "px";
+			sliderItemElements.forEach((sliderItemElement) => {
+				sliderItemElement.style.width = `${
+					sliderWidth / showItemCount
+				}px`;
+				sliderItemElement.style.minWidth = `${
+					sliderWidth / showItemCount
+				}px`;
+				sliderItemElement.style.maxWidth = `${
+					sliderWidth / showItemCount
+				}px`;
+			});
+			renderCounter();
+		});
+	}
 }
 
 const Modules = {
@@ -91,6 +216,13 @@ const Modules = {
 			imgSelector: ".faq-item__content-image",
 			destinationSelector: ".faq-image-desktop",
 			itemSelector: ".faq-item__title-grid",
+		});
+		Helpers.handleSlider({
+			scopeSelector: "#our-team",
+			sliderSelector: ".our-team__members",
+			sliderItemSelector: ".our-team__members-item",
+			counterSelector: ".our-team__page",
+			counterItemClassName: "our-team__page-item",
 		});
 		this.handleScrollHeader();
 		AOS.init();

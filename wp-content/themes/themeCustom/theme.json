@@ -776,6 +776,11 @@
 			"area": "uncategorized",
 			"name": "project-counter",
 			"title": "Project Counter"
+		},
+		{
+			"area": "uncategorized",
+			"name": "our-team",
+			"title": "Our Team"
 		}
 	]
 }
