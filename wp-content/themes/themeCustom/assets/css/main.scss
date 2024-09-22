@@ -1,0 +1,36 @@
+@import "./_initial.scss";
+@import "./_animation.scss";
+/* start common */
+@import "./_header.scss";
+@import "./_navigation.scss";
+@import "./_footer.scss";
+/* end common */
+
+/* start the home page block */
+@import "./_slider.scss";
+@import "./_our-client.scss";
+@import "./_our-services.scss";
+@import "./_faq.scss";
+/* start the home page block */
+
+/* start the service page block */
+/* start the service page block */
+
+/* start the project page block */
+/* start the project page block */
+
+/* start the about page block */
+@import "./_about.scss";
+@import "./_project_counter.scss";
+@import "./_our-team.scss";
+/* start the about page block */
+
+/* start the contact page block */
+/* start the contact page block */
+
+/* start the not found page block */
+/* start the not found page block */
+
+:where(.wp-site-blocks) > * {
+	margin-block: 0 !important;
+}

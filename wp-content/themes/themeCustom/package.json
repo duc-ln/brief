@@ -1,0 +1,19 @@
+{
+  "name": "themecustom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass assets/css/main.scss assets/css/main.css",
+    "sass:watch": "sass --watch assets/css/main.scss:assets/css/main.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.79.3"
+  }
+}
