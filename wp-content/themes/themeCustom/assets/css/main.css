@@ -1169,6 +1169,10 @@ header.active {
 
 /* end common */
 /* start the home page block */
+.n2-ss-slider-wrapper-inside {
+  height: 100vh;
+}
+
 .home-auto-slider {
   --width-index: 80px;
   --font-size-index: 48px;
@@ -1249,7 +1253,8 @@ header.active {
 .can-scroll-down-button.unactive {
   opacity: 0;
 }
-.can-scroll-down-button figure, .can-scroll-down-button img {
+.can-scroll-down-button figure,
+.can-scroll-down-button img {
   width: 100%;
   height: 100%;
 }

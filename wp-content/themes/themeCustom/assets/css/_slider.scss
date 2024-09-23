@@ -1,3 +1,8 @@
+// phần này test để banner full page
+.n2-ss-slider-wrapper-inside {
+	height: 100vh;
+}
+
 .home-auto-slider {
 	--width-index: 80px;
 	--font-size-index: 48px;
@@ -27,7 +32,7 @@
 		border-left: 2px;
 		border-bottom: 2px;
 
-		& > div {
+		&>div {
 			border: none !important;
 			font-size: var(--font-size-index) !important;
 			font-weight: var(--line-height-index);
@@ -67,28 +72,29 @@
 }
 
 .can-scroll-down-button {
-    position: fixed;
-    bottom: 2dvh;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 42px;
-    height: 70px;
-    z-index: 30;
-    opacity: 1;
-    transition: opacity 0.2s linear;
-    pointer-events: none;
+	position: fixed;
+	bottom: 2dvh;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 42px;
+	height: 70px;
+	z-index: 30;
+	opacity: 1;
+	transition: opacity 0.2s linear;
+	pointer-events: none;
 
 	@media (max-width: 600px) {
 		width: 30px;
 		height: 50px;
 	}
 
-    &.unactive {
-        opacity: 0;
-    }
+	&.unactive {
+		opacity: 0;
+	}
 
-    figure,img {
-        width: 100%;
-        height: 100%;
-    }
+	figure,
+	img {
+		width: 100%;
+		height: 100%;
+	}
 }
