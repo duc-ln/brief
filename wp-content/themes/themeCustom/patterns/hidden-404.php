@@ -5,24 +5,35 @@
  * Inserter: no
  */
 ?>
-<!-- wp:spacer {"height":"var(--wp--preset--spacing--30)"} -->
-<div style="height:var(--wp--preset--spacing--30)" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
 
-<!-- wp:heading {"level":1,"align":"wide"} -->
-<h1 class="alignwide"><?php echo esc_html_x( '404', 'Error code for a webpage that is not found.', 'themeCustom' ); ?></h1>
-<!-- /wp:heading -->
+<!-- wp:group {"className":"notFound container","layout":{"type":"constrained"}} -->
+<div class="wp-block-group notFound container">
+	<!-- wp:group {"className":"container__left","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group container__left">
+		<!-- wp:paragraph {"className":"stroke-text title-not-found","style":{"typography":{"fontSize":"64px","fontStyle":"normal","fontWeight":"700","textTransform":"uppercase"}}} -->
+		<p class="stroke-text title-not-found" style="font-size:64px;font-style:normal;font-weight:700;text-transform:uppercase"> page not found</p>
+		<!-- /wp:paragraph -->
 
-<!-- wp:group {"align":"wide","layout":{"type":"default"},"style":{"spacing":{"margin":{"top":"5px"}}}} -->
-<div class="wp-block-group alignwide" style="margin-top:5px">
-	<!-- wp:paragraph -->
-	<p><?php echo esc_html_x( 'This page could not be found.', 'Message to convey that a webpage could not be found', 'themeCustom' ); ?></p>
-	<!-- /wp:paragraph -->
+		<!-- wp:button {"className":"is-style-outline btn-back-to-top","style":{"border":{"radius":"4px","width":"1px"},"spacing":{"padding":{"left":"24px","right":"24px","top":"5px","bottom":"5px"}}}} -->
+		<div class="wp-block-button is-style-outline btn-back-to-top">
+			<a href="/" class="wp-block-button__link wp-element-button" style="border-width:1px;border-radius:4px;padding-top:5px;padding-right:24px;padding-bottom:5px;padding-left:24px">
+				Back to home
+			</a>
+		</div>
+		<!-- /wp:button -->
+	</div>
+	<!-- /wp:group -->
 
-	<!-- wp:search {"label":"<?php echo esc_html_x( 'Search', 'label', 'themeCustom' ); ?>","placeholder":"<?php echo esc_attr_x( 'Search...', 'placeholder for search field', 'themeCustom' ); ?>","showLabel":false,"width":100,"widthUnit":"%","buttonText":"<?php esc_attr_e( 'Search', 'themeCustom' ); ?>","buttonUseIcon":true,"align":"center"} /-->
+	<!-- wp:group {"className": "container__right"} -->
+	<div class="wp-block-group container__right">
+		<!-- wp:image {"className": "image-not-found"} -->
+		<figure class="wp-block-image image-not-found">
+			<img src="http://localhost:81/wp-content/icons/404-notfound.png" alt="" />
+		</figure>
+		<!-- /wp:image -->
+	</div>
+	<!-- /wp:group -->
 </div>
 <!-- /wp:group -->
 
-<!-- wp:spacer {"height":"var(--wp--preset--spacing--70)"} -->
-<div style="height:var(--wp--preset--spacing--70)" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
+

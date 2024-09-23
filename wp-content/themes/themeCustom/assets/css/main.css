@@ -1689,9 +1689,62 @@ header.active {
 /* start the contact page block */
 /* start the contact page block */
 /* start the not found page block */
+.notFound {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  grid-template-rows: auto;
+  gap: 32px;
+  align-items: center;
+  padding: 64px;
+}
+@media (max-width: 600px) {
+  .notFound {
+    padding: 32px 24px;
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+@media (max-width: 1023px) {
+  .notFound .container__left .title-not-found {
+    font-size: 32px !important;
+  }
+}
+@media (max-width: 600px) {
+  .notFound .container__left {
+    order: 2;
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .notFound .container__right {
+    order: 1;
+  }
+}
+.notFound .container__right .image-not-found img {
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+@media (max-width: 1023px) {
+  .notFound .container__right .image-not-found img {
+    width: 80%;
+  }
+}
+@media (max-width: 600px) {
+  .notFound .container__right .image-not-found img {
+    width: 60%;
+  }
+}
+
 /* start the not found page block */
 :where(.wp-site-blocks) > * {
   margin-block: 0 !important;
+}
+
+.stroke-text {
+  color: transparent;
+  -webkit-text-stroke: 1px black;
+  text-stroke: 1px black;
 }
 
 /*# sourceMappingURL=main.css.map */

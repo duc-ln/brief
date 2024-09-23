@@ -29,8 +29,15 @@
 /* start the contact page block */
 
 /* start the not found page block */
+@import "./not-found.scss";
 /* start the not found page block */
 
-:where(.wp-site-blocks) > * {
+:where(.wp-site-blocks)>* {
 	margin-block: 0 !important;
+}
+
+.stroke-text {
+	color: transparent;
+	-webkit-text-stroke: 1px black;
+	text-stroke: 1px black;
 }
