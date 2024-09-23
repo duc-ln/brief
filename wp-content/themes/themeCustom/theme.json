@@ -16,6 +16,11 @@
 			"name": "about",
 			"postTypes": ["page", "my-cpt"],
 			"title": "About Us"
+		},
+		{
+			"name": "contact",
+			"postTypes": ["page", "my-cpt"],
+			"title": "Contact page"
 		}
 	],
 	"settings": {
@@ -222,7 +227,7 @@
 							"fontStyle": "italic",
 							"fontStretch": "normal",
 							"src": [
-								"file:./assets/fonts/poppins/Poppins-RegularItalic.ttf"
+								"file:./assets/fonts/poppins/Poppins-Italic.ttf"
 							]
 						},
 						{
@@ -781,6 +786,11 @@
 			"area": "uncategorized",
 			"name": "our-team",
 			"title": "Our Team"
+		},
+		{
+			"area": "uncategorized",
+			"name": "social",
+			"title": "Social"
 		}
 	]
 }

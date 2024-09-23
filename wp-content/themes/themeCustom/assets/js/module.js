@@ -39,7 +39,7 @@ class Helpers {
 		itemSelector,
 	}) {
 		const scopeElement = document.querySelector(scopeSelector);
-		if (!scopeElement) return console.error("No scope element");
+		if (!scopeElement) return;
 		const itemElements = scopeElement.querySelectorAll(itemSelector);
 		const activeElements =
 			scopeElement.querySelectorAll(activeEventSelector);
