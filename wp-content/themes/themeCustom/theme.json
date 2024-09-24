@@ -21,6 +21,31 @@
 			"name": "contact",
 			"postTypes": ["page", "my-cpt"],
 			"title": "Contact page"
+		},
+		{
+			"name": "architectural-cgi",
+			"postTypes": ["page", "my-cpt"],
+			"title": "Architectural CGI"
+		},
+		{
+			"name": "interior-cgi",
+			"postTypes": ["page", "my-cpt"],
+			"title": "Interior CGI"
+		},
+		{
+			"name": "virtual-staging",
+			"postTypes": ["page", "my-cpt"],
+			"title": "Virtual Staging"
+		},
+		{
+			"name": "product-cgi",
+			"postTypes": ["page", "my-cpt"],
+			"title": "Product CGI"
+		},
+		{
+			"name": "animation",
+			"postTypes": ["page", "my-cpt"],
+			"title": "Animation"
 		}
 	],
 	"settings": {

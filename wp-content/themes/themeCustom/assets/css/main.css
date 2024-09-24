@@ -1913,7 +1913,78 @@ header.active {
 }
 
 /* start the not found page block */
-.block-editor-iframe__body .is-root-container {
+/* start the services page block */
+.service-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: var(--height-header);
+}
+.service-header__main {
+  width: 100%;
+  max-width: var(--max-width-content);
+  padding: 64px var(--padding-content);
+}
+.service-header__title {
+  line-height: var(--line-height-max);
+}
+.service-header_description {
+  line-height: var(--line-height-s);
+}
+
+.product-list {
+  --rounder: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 68px var(--padding-content);
+}
+.product-list__title {
+  line-height: var(--line-height-max);
+}
+@media (max-width: 600px) {
+  .product-list__title {
+    line-height: var(--line-height-xl);
+  }
+}
+.product-list__template {
+  width: 100%;
+  max-width: var(--max-width-content);
+  display: flex !important;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: -10px;
+  height: 100dvh;
+  max-height: 900px;
+  gap: unset !important;
+  overflow-x: auto;
+  align-content: start;
+}
+.product-list__template::-webkit-scrollbar {
+  display: none;
+}
+.product-list__template > .wp-block-post {
+  padding: 10px;
+  height: max-content !important;
+  width: 25%;
+}
+@media (max-width: 1023px) {
+  .product-list__template > .wp-block-post {
+    width: 50%;
+  }
+}
+.product-list__template > .wp-block-post figure,
+.product-list__template > .wp-block-post a,
+.product-list__template > .wp-block-post img {
+  width: 100% !important;
+  height: max-content !important;
+  border-radius: var(--rounder);
+  margin: 0 !important;
+}
+
+/* start the services page block */
+.wp-admin .is-root-container {
   background-color: white !important;
 }
 
