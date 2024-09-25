@@ -1,0 +1,119 @@
+.product-detail {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 0 var(--padding-content);
+	padding-top: var(--height-header);
+
+	&__content {
+		width: 100%;
+		max-width: var(--max-width-content);
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.product-information {
+	width: 100%;
+	padding: 68px 0;
+
+	&__main {
+		gap: 0 !important;
+	}
+
+	&__title {
+		line-height: var(--line-height-max);
+		margin-bottom: 16px !important;
+	}
+
+	&__content {
+		margin-top: 48px !important;
+	}
+
+	&__item {
+		position: relative;
+		padding: 31px 20px 22px 20px;
+		border: 2px solid var(--wp--preset--color--gray-800);
+		border-radius: 10px;
+		row-gap: 12px !important;
+		align-items: center;
+
+		@media (max-width: 1023px) {
+			grid-column: span 2;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			right: 10px;
+			bottom: 10px;
+			border-radius: 10px;
+			background: linear-gradient(270deg, #ffffff 0%, #e5e5e5 100%);
+			z-index: -1;
+		}
+
+		&-label {
+			line-height: var(--line-height-s);
+			text-align: center;
+		}
+
+		&-content {
+			line-height: var(--line-height-xl);
+			text-align: center;
+		}
+	}
+}
+
+.media-text-grid {
+	--spacing-image: 5%;
+	--spacing-negative-image: -5%;
+	&__item {
+		display: flex;
+		align-items: flex-end;
+	}
+
+	@media (max-width: 600px) {
+		.media-text-grid__item {
+			grid-column: span 2;
+		}
+	}
+
+	&__item:last-child {
+		align-items: flex-start;
+		.media-text-grid__image-emty {
+			left: unset;
+			right: var(--spacing-negative-image);
+		}
+	}
+	&__image {
+		position: relative;
+		height: max-content;
+		width: calc(100% - var(--spacing-image)) !important;
+		padding-bottom: var(--spacing-image);
+
+		&-emty {
+			position: absolute;
+			bottom: 0;
+			left: var(--spacing-negative-image);
+			height: 50%;
+			width: 50%;
+			max-width: 410px;
+			max-height: 410px;
+			border-radius: 10px;
+		}
+
+		figure {
+			position: relative;
+			z-index: 1;
+		}
+
+		figure,
+		img {
+			width: 100%;
+			margin: unset !important;
+			margin-block: unset !important;
+		}
+	}
+}

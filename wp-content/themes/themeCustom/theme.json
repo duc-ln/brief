@@ -46,6 +46,11 @@
 			"name": "animation",
 			"postTypes": ["page", "my-cpt"],
 			"title": "Animation"
+		},
+		{
+			"name": "product-detail",
+			"postTypes": ["my-cpt", "post"],
+			"title": "Product Detail"
 		}
 	],
 	"settings": {
