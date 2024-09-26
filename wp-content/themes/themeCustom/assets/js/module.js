@@ -56,7 +56,8 @@ class Helpers {
 			return;
 
 		function transalteImage(index) {
-			let imageEl = imageElments[index]?.cloneNode(true);
+			if (window.innerWidth <= 1439) return
+			let imageEl = imageElments[index];
 			if (!imageEl) {
 				const noImageEl = document.createElement("p");
 				noImageEl.innerText = "No image";
@@ -71,8 +72,23 @@ class Helpers {
 		if (activeElements[0]) {
 			activeElements[0].classList.add("active");
 			itemElements[0].classList.add("active");
-			transalteImage(0);
+			if (window.innerWidth > 1439) transalteImage(0);
 		}
+
+		window.addEventListener('resize', () => {
+			if (window.innerWidth > 1439 && !destinationElement.firstChild) {
+				const activeElement = [...itemElements].find(item => item.matches('.active'))			
+				const imageActiveElement = activeElement.querySelector(imgSelector)
+				destinationElement.appendChild(imageActiveElement)
+			}
+			if (window.innerWidth <= 1439 && destinationElement.firstChild) {
+				itemElements.forEach((item, index) => {
+					if (!item.querySelector(imgSelector)) {
+						item.appendChild(imageElments[index])
+					}
+				})
+			}
+		})
 		activeElements.forEach((activeEl, index) => {
 			activeEl.addEventListener("click", () => {
 				Helpers.removeAllActive(activeElements);
