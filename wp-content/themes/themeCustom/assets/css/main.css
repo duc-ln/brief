@@ -1095,6 +1095,11 @@ header.active {
   grid-template-columns: 6fr 5fr;
   gap: 152px;
 }
+@media (max-width: 1023px) {
+  .footer__main {
+    gap: 48px;
+  }
+}
 @media (max-width: 600px) {
   .footer__main {
     grid-template-columns: 1fr;
@@ -1140,8 +1145,16 @@ header.active {
 }
 @media (max-width: 600px) {
   .footer__main .btn-contact {
+    margin-inline: auto;
     text-align: center;
   }
+}
+.footer__main .container__left {
+  width: 100%;
+}
+.footer__main .container__right {
+  width: 100%;
+  margin-block-start: unset;
 }
 .footer__bottom {
   margin-block-start: 46px;

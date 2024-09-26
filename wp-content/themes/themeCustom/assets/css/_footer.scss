@@ -16,20 +16,22 @@
 		grid-template-columns: 6fr 5fr;
 		gap: 152px;
 
+		@media (max-width: 1023px) {
+			gap: 48px;
+		}
+
 		@media (max-width: 600px) {
 			grid-template-columns: 1fr;
 			gap: 32px;
 		}
 
 		.testimonial {
-			&__speak {
-			}
+			&__speak {}
 
 			&__person {
 				margin-block-start: 10px;
 
-				&-name {
-				}
+				&-name {}
 
 				&-position {
 					margin-block-start: unset;
@@ -77,8 +79,18 @@
 			margin-block-start: 30px;
 
 			@media (max-width: 600px) {
+				margin-inline: auto;
 				text-align: center;
 			}
+		}
+
+		.container__left {
+			width: 100%;
+		}
+
+		.container__right {
+			width: 100%;
+			margin-block-start: unset;
 		}
 	}
 
