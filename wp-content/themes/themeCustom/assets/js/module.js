@@ -56,7 +56,7 @@ class Helpers {
 			return;
 
 		function transalteImage(index) {
-			if (window.innerWidth <= 1439) return
+			if (window.innerWidth <= 1439) return;
 			let imageEl = imageElments[index];
 			if (!imageEl) {
 				const noImageEl = document.createElement("p");
@@ -75,20 +75,23 @@ class Helpers {
 			if (window.innerWidth > 1439) transalteImage(0);
 		}
 
-		window.addEventListener('resize', () => {
+		window.addEventListener("resize", () => {
 			if (window.innerWidth > 1439 && !destinationElement.firstChild) {
-				const activeElement = [...itemElements].find(item => item.matches('.active'))			
-				const imageActiveElement = activeElement.querySelector(imgSelector)
-				destinationElement.appendChild(imageActiveElement)
+				const activeElement = [...itemElements].find((item) =>
+					item.matches(".active"),
+				);
+				const imageActiveElement =
+					activeElement.querySelector(imgSelector);
+				destinationElement.appendChild(imageActiveElement);
 			}
 			if (window.innerWidth <= 1439 && destinationElement.firstChild) {
 				itemElements.forEach((item, index) => {
 					if (!item.querySelector(imgSelector)) {
-						item.appendChild(imageElments[index])
+						item.appendChild(imageElments[index]);
 					}
-				})
+				});
 			}
-		})
+		});
 		activeElements.forEach((activeEl, index) => {
 			activeEl.addEventListener("click", () => {
 				Helpers.removeAllActive(activeElements);
@@ -241,6 +244,19 @@ const Modules = {
 			counterItemClassName: "our-team__page-item",
 		});
 		this.handleScrollHeader();
+		if (document.querySelector(".generate-slider")) {
+			new Swiper(".generate-slider", {
+				direction: "horizontal",
+				loop: true,
+				allowTouchMove: false,
+				slidesPerView: 1,
+				slidesPerGroup: 1,
+				longSwipesMs: 500,
+				autoplay: {
+					delay: 5000,
+				},
+			});
+		}
 		AOS.init();
 	},
 	handleScrollHeader() {
@@ -248,22 +264,15 @@ const Modules = {
 			const elementScroll = window;
 			const headerEl = document.querySelector("header");
 
-			const canScrollDownButtonEl = document.querySelector(
-				"#can-scroll-down-button",
-			);
 			if (elementScroll) {
 				elementScroll.addEventListener("scroll", (e) => {
 					const offsetTop = window.pageYOffset;
 
 					if (offsetTop === 0) {
 						if (headerEl) headerEl.classList.remove("active");
-						if (canScrollDownButtonEl)
-							canScrollDownButtonEl.classList.remove("unactive");
 					}
 					if (offsetTop > 0) {
 						if (headerEl) headerEl.classList.add("active");
-						if (canScrollDownButtonEl)
-							canScrollDownButtonEl.classList.add("unactive");
 					}
 				});
 			}

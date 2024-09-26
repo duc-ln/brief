@@ -1,5 +1,7 @@
 @import "./_initial.scss";
 @import "./_animation.scss";
+@import "./_slider.scss";
+@import "./_my-slider";
 /* start common */
 @import "./_header.scss";
 @import "./_navigation.scss";
@@ -8,7 +10,6 @@
 /* end common */
 
 /* start the home page block */
-@import "./_slider.scss";
 @import "./_our-client.scss";
 @import "./_our-services.scss";
 @import "./_faq.scss";
