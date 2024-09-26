@@ -9,6 +9,25 @@ class Helpers {
 		return width;
 	}
 
+	static animateCounter(obj, duration) {
+		const start = 0
+		const end = Number(obj.innerText)
+		if (Number.isNaN(end)) return
+		let startTimestamp = null;
+		const step = (timestamp) => {
+			if (!startTimestamp) startTimestamp = timestamp;
+			const progress = Math.min(
+				(timestamp - startTimestamp) / duration,
+				1,
+			);
+			obj.innerText = Math.floor(progress * (end - start) + start);
+			if (progress < 1) {
+				window.requestAnimationFrame(step);
+			}
+		};
+		window.requestAnimationFrame(step);
+	}
+
 	static changeWhenEvent(targetHoverSelector, targetChangeSelector, events) {
 		const [activeEvent, outEvent] = events;
 		const hoverElements = document.querySelectorAll(targetHoverSelector);
@@ -258,6 +277,28 @@ const Modules = {
 			});
 		}
 		AOS.init();
+		const projectConter = document.querySelector(".project-counter");
+		if (projectConter) {
+			const observer = new IntersectionObserver(
+				(entries) => {
+					entries.forEach((entry) => {
+						if (entry.intersectionRatio >= 0.5) {
+							const objects = projectConter.querySelectorAll('.project-counter__content-number')
+							if (objects.length > 0) {
+								[...objects].forEach(obj => {
+									Helpers.animateCounter(obj, 3000)
+								})
+							}
+							observer.unobserve(entry.target);
+						}
+					});
+				},
+				{
+					threshold: 0.5,
+				},
+			);
+			observer.observe(projectConter);
+		}
 	},
 	handleScrollHeader() {
 		try {
@@ -267,7 +308,6 @@ const Modules = {
 			if (elementScroll) {
 				elementScroll.addEventListener("scroll", (e) => {
 					const offsetTop = window.pageYOffset;
-
 					if (offsetTop === 0) {
 						if (headerEl) headerEl.classList.remove("active");
 					}

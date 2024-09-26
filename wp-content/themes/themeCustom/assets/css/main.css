@@ -2439,37 +2439,52 @@ header.active {
   }
 }
 
-#project-counter {
+#project-counter,
+.project-counter {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-#project-counter .project-counter__main {
+#project-counter .project-counter__main,
+.project-counter .project-counter__main {
   width: 100%;
   max-width: var(--max-width-content);
   padding: 0 var(--padding-content);
   gap: var(--grid-gap-content);
 }
-#project-counter .project-counter__main .project-counter__item {
+#project-counter .project-counter__main .project-counter__item,
+.project-counter .project-counter__main .project-counter__item {
   gap: 0;
 }
-#project-counter .project-counter__main .project-counter__item .project-counter__content {
+#project-counter .project-counter__main .project-counter__item .project-counter__content,
+.project-counter .project-counter__main .project-counter__item .project-counter__content {
   line-height: 96px;
+  display: flex;
+  align-items: center;
 }
-#project-counter .project-counter__main .project-counter__item .project-counter__description {
+#project-counter .project-counter__main .project-counter__item .project-counter__content p,
+.project-counter .project-counter__main .project-counter__item .project-counter__content p {
+  margin: 0 !important;
+}
+#project-counter .project-counter__main .project-counter__item .project-counter__description,
+.project-counter .project-counter__main .project-counter__item .project-counter__description {
   line-height: var(--line-height-xl);
 }
-#project-counter .project-counter__main .project-counter__item figure {
+#project-counter .project-counter__main .project-counter__item figure,
+.project-counter .project-counter__main .project-counter__item figure {
   margin-bottom: 24px;
 }
 @media (max-width: 1023px) {
-  #project-counter .project-counter__main .project-counter__item {
+  #project-counter .project-counter__main .project-counter__item,
+  .project-counter .project-counter__main .project-counter__item {
     grid-column: span 6;
   }
-  #project-counter .project-counter__main .project-counter__item figure {
+  #project-counter .project-counter__main .project-counter__item figure,
+  .project-counter .project-counter__main .project-counter__item figure {
     margin-bottom: 10px;
   }
-  #project-counter .project-counter__main .project-counter__item .project-counter__content {
+  #project-counter .project-counter__main .project-counter__item .project-counter__content,
+  .project-counter .project-counter__main .project-counter__item .project-counter__content {
     line-height: 60px;
   }
 }
