@@ -144,12 +144,10 @@ class Helpers {
 
 		sliderItemElements.forEach((sliderItemElement) => {
 			sliderItemElement.style.width = `${sliderWidth / showItemCount}px`;
-			sliderItemElement.style.minWidth = `${
-				sliderWidth / showItemCount
-			}px`;
-			sliderItemElement.style.maxWidth = `${
-				sliderWidth / showItemCount
-			}px`;
+			sliderItemElement.style.minWidth = `${sliderWidth / showItemCount
+				}px`;
+			sliderItemElement.style.maxWidth = `${sliderWidth / showItemCount
+				}px`;
 			sliderItemElement.style.opacity = "1";
 		});
 
@@ -226,15 +224,12 @@ class Helpers {
 			else showItemCount = 4;
 			sliderElement.style.width = sliderWidth + "px";
 			sliderItemElements.forEach((sliderItemElement) => {
-				sliderItemElement.style.width = `${
-					sliderWidth / showItemCount
-				}px`;
-				sliderItemElement.style.minWidth = `${
-					sliderWidth / showItemCount
-				}px`;
-				sliderItemElement.style.maxWidth = `${
-					sliderWidth / showItemCount
-				}px`;
+				sliderItemElement.style.width = `${sliderWidth / showItemCount
+					}px`;
+				sliderItemElement.style.minWidth = `${sliderWidth / showItemCount
+					}px`;
+				sliderItemElement.style.maxWidth = `${sliderWidth / showItemCount
+					}px`;
 			});
 			renderCounter();
 		});
@@ -244,9 +239,9 @@ class Helpers {
 const Modules = {
 	onInt() {
 		Helpers.changeWhenEvent(
-			".our-services-item-title",
-			".our-services-first-row .our-services-first-row-item",
-			["mouseover", "mouseout"],
+			".servicesItem__title",
+			".ourServices__main-images .images-item",
+			["mouseover"],
 		);
 		Helpers.faqDisplayHandle({
 			scopeSelector: "#faq",
