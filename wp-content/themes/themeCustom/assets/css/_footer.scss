@@ -73,32 +73,32 @@
 			}
 		}
 
-		// .information {
-		// 	&__item {
-		// 		margin-block-start: unset;
-		// 		display: flex;
-		// 		align-items: center;
-		// 		gap: 16px;
+		.information {
+			&__item {
+				margin-block-start: unset;
+				display: flex;
+				align-items: center;
+				gap: 16px;
 
-		// 		&:not(:first-child) {
-		// 			margin-block-start: 16px;
-		// 		}
+				&:not(:first-child) {
+					margin-block-start: 16px;
+				}
 
-		// 		.block-icon {
-		// 			width: 20px;
-		// 			height: 20px;
-		// 			min-height: 20px;
-		// 			display: block;
+				.block-icon {
+					width: 20px;
+					height: 20px;
+					min-height: 20px;
+					display: block;
 
-		// 			img {
-		// 				width: 100%;
-		// 				height: 100%;
-		// 				object-fit: contain;
-		// 				display: block;
-		// 			}
-		// 		}
-		// 	}
-		// }
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: contain;
+						display: block;
+					}
+				}
+			}
+		}
 
 		.btn-contact {
 			margin-block-start: 30px;

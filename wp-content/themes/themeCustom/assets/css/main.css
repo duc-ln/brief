@@ -1959,6 +1959,27 @@ header.active {
   font-weight: bold;
   color: #0A0A0A;
 }
+.footer__main .information__item {
+  margin-block-start: unset;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.footer__main .information__item:not(:first-child) {
+  margin-block-start: 16px;
+}
+.footer__main .information__item .block-icon {
+  width: 20px;
+  height: 20px;
+  min-height: 20px;
+  display: block;
+}
+.footer__main .information__item .block-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
 .footer__main .btn-contact {
   margin-block-start: 30px;
 }
