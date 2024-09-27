@@ -28,7 +28,7 @@
 	<div class="wp-block-group container__right">
 		<!-- wp:image {"className": "image-not-found"} -->
 		<figure class="wp-block-image image-not-found">
-			<img src="http://localhost:81/wp-content/icons/404-notfound.png" alt="" />
+			<img src="https://phinest.studio/wp-content/assets/images/image-10.svg" alt="" />
 		</figure>
 		<!-- /wp:image -->
 	</div>
