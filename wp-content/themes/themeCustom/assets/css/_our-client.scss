@@ -1,14 +1,12 @@
-.our-client {
+.ourClient {
 	--height-background: 600px;
 	--size-item: 208px;
+	width: 100%;
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding-top: calc(
-		var(--height-background) - var(--size-item) / 2 -
-			var(--grid-gap-content)
-	);
+	padding-top: calc(var(--height-background) - var(--size-item) / 2 - var(--grid-gap-content));
 
 	@media (max-width: 1439px) {
 		--height-background: 600px;
@@ -22,56 +20,68 @@
 		--height-background: 300px;
 		margin: 30px 0 !important;
 		padding-top: calc(var(--height-background) - var(--size-item) / 2);
-		.ourClient__cover {
+
+		&__cover {
 			min-height: unset;
 		}
 	}
-	.ourClient__cover {
+
+	&__cover {
 		width: 100%;
 		height: var(--height-background);
 
-		position: absolute;
+		position: absolute !important;
 		top: 0;
+
 		img {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
 		}
-
-		.wp-block-cover__background {
-			display: none;
-		}
 	}
 
-	.ourClient__main {
+	&__main {
 		max-width: var(--max-width-content);
-		padding-left: var(--padding-content);
-		padding-right: var(--padding-content);
-		gap: var(--grid-gap-content);
 		margin-block: unset !important;
 		z-index: 3;
+		display: grid;
+		grid-template-columns: repeat(6, minmax(0, 1fr));
+		grid-template-rows: auto;
+		gap: 32px;
 
-		@media (max-width: 700px) {
-			gap: 10px;
+		@media (max-width: 1023px) {
+			grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
 		}
 
-		figure {
-			height: var(--size-item);
-			img {
-				height: 100%;
+		@media (max-width: 767px) {
+			grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+			gap: 16px;
+		}
+
+		@media (max-width: 500px) {
+			grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+		}
+
+		.clientItem {
+			background: #ffffff;
+			box-shadow: 0 0 8px 1px #00000010;
+			display: flex;
+			flex-direction: column;
+			padding: 30px;
+			align-items: center;
+			justify-content: center;
+
+			&__logo {
+				width: 100%;
 			}
 
-			@media (max-width: 1439px) {
-				grid-column: span 3;
-			}
+			&__name {
+				margin-block-start: 16px;
 
-			@media (max-width: 1023px) {
-				grid-column: span 4;
-			}
-
-			@media (max-width: 700px) {
-				--size-item: 170px;
-				grid-column: span 6;
+				@media (max-width: 767px) {
+					font-size: 14px !important;
+					font-weight: 600 !important;
+				}
 			}
 		}
 	}

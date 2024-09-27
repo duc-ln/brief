@@ -2025,9 +2025,10 @@ header.active {
 
 /* end common */
 /* start the home page block */
-.our-client {
+.ourClient {
   --height-background: 600px;
   --size-item: 208px;
+  width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -2035,72 +2036,80 @@ header.active {
   padding-top: calc(var(--height-background) - var(--size-item) / 2 - var(--grid-gap-content));
 }
 @media (max-width: 1439px) {
-  .our-client {
+  .ourClient {
     --height-background: 600px;
   }
 }
 @media (max-width: 1023px) {
-  .our-client {
+  .ourClient {
     --height-background: 600px;
   }
 }
 @media (max-width: 700px) {
-  .our-client {
+  .ourClient {
     --height-background: 300px;
     margin: 30px 0 !important;
     padding-top: calc(var(--height-background) - var(--size-item) / 2);
   }
-  .our-client .ourClient__cover {
+  .ourClient__cover {
     min-height: unset;
   }
 }
-.our-client .ourClient__cover {
+.ourClient__cover {
   width: 100%;
   height: var(--height-background);
-  position: absolute;
+  position: absolute !important;
   top: 0;
 }
-.our-client .ourClient__cover img {
+.ourClient__cover img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.our-client .ourClient__cover .wp-block-cover__background {
-  display: none;
-}
-.our-client .ourClient__main {
+.ourClient__main {
   max-width: var(--max-width-content);
-  padding-left: var(--padding-content);
-  padding-right: var(--padding-content);
-  gap: var(--grid-gap-content);
   margin-block: unset !important;
   z-index: 3;
-}
-@media (max-width: 700px) {
-  .our-client .ourClient__main {
-    gap: 10px;
-  }
-}
-.our-client .ourClient__main figure {
-  height: var(--size-item);
-}
-.our-client .ourClient__main figure img {
-  height: 100%;
-}
-@media (max-width: 1439px) {
-  .our-client .ourClient__main figure {
-    grid-column: span 3;
-  }
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-rows: auto;
+  gap: 32px;
 }
 @media (max-width: 1023px) {
-  .our-client .ourClient__main figure {
-    grid-column: span 4;
+  .ourClient__main {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
   }
 }
-@media (max-width: 700px) {
-  .our-client .ourClient__main figure {
-    --size-item: 170px;
-    grid-column: span 6;
+@media (max-width: 767px) {
+  .ourClient__main {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 16px;
+  }
+}
+@media (max-width: 500px) {
+  .ourClient__main {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+.ourClient__main .clientItem {
+  background: #ffffff;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.062745098);
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.ourClient__main .clientItem__logo {
+  width: 100%;
+}
+.ourClient__main .clientItem__name {
+  margin-block-start: 16px;
+}
+@media (max-width: 767px) {
+  .ourClient__main .clientItem__name {
+    font-size: 14px !important;
+    font-weight: 600 !important;
   }
 }
 
