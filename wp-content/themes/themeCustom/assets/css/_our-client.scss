@@ -7,6 +7,7 @@
 	flex-direction: column;
 	align-items: center;
 	padding-top: calc(var(--height-background) - var(--size-item) / 2 - var(--grid-gap-content));
+	margin-block: 64px;
 
 	@media (max-width: 1439px) {
 		--height-background: 600px;
