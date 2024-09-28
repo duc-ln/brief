@@ -2200,6 +2200,16 @@ header.active {
   grid-template-rows: auto;
   gap: 32px;
 }
+@media (max-width: 1023px) {
+  .faq__main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 767px) {
+  .faq__main {
+    display: block !important;
+  }
+}
 .faq__main-list {
   width: 100%;
 }
@@ -2249,6 +2259,11 @@ header.active {
   width: 100%;
   margin-block-start: unset !important;
   position: relative;
+}
+@media (max-width: 767px) {
+  .faq__main-images {
+    display: none;
+  }
 }
 .faq__main-images .images-item {
   position: absolute;
