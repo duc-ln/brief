@@ -54,6 +54,14 @@
 		&-info {
 			width: 100%;
 
+			&-title {
+				width: 100%;
+
+				@media (max-width: 767px) {
+					text-align: center;
+				}
+			}
+
 			.servicesItem {
 				display: flex;
 				gap: 16px;

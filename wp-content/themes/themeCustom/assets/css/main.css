@@ -2166,6 +2166,14 @@ header.active {
 .ourServices__main-info {
   width: 100%;
 }
+.ourServices__main-info-title {
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .ourServices__main-info-title {
+    text-align: center;
+  }
+}
 .ourServices__main-info .servicesItem {
   display: flex;
   gap: 16px;
@@ -2207,6 +2215,14 @@ header.active {
 }
 .faq__main-list {
   width: 100%;
+}
+.faq__main-list .faq__heading {
+  width: 100%;
+}
+@media (max-width: 1023px) {
+  .faq__main-list .faq__heading {
+    text-align: center;
+  }
 }
 .faq__main-list .faqItem {
   width: 100%;

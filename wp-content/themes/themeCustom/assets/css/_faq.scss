@@ -14,7 +14,13 @@
 		&-list {
 			width: 100%;
 
-			.faq__heading {}
+			.faq__heading {
+				width: 100%;
+
+				@media (max-width: 1023px) {
+					text-align: center;
+				}
+			}
 
 			.faqItem {
 				width: 100%;
