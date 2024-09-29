@@ -2853,7 +2853,7 @@ header.active {
 }
 
 .product-list {
-  --rounder: 10px;
+  --rounder: 8px;
   width: 100%;
   display: flex;
   flex-direction: column;

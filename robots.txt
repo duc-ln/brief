@@ -1,0 +1,8 @@
+# START YOAST BLOCK
+# ---------------------------
+User-agent: *
+Disallow:
+
+Sitemap: http://interior.test:3000/sitemap_index.xml
+# ---------------------------
+# END YOAST BLOCK
