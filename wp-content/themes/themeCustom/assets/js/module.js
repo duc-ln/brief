@@ -247,7 +247,7 @@ const Modules = {
 			new Swiper(".generate-slider", {
 				direction: "horizontal",
 				loop: true,
-				allowTouchMove: false,
+				allowTouchMove: true,
 				slidesPerView: 1,
 				slidesPerGroup: 1,
 				longSwipesMs: 500,

@@ -4,7 +4,7 @@
 	gap: 16px;
 	align-items: center;
 
-	@media (max-width: 600px) {
+	@media (max-width: 767px) {
 		justify-content: center;
 	}
 
@@ -19,5 +19,13 @@
 			height: 100%;
 			object-fit: contain;
 		}
+	}
+}
+
+/* Editor */
+.block-editor-iframe__html {
+	.social[data-type="core/group"] {
+		padding: 20px;
+		border-radius: var(--rounder);
 	}
 }

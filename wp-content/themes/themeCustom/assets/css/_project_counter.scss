@@ -12,6 +12,8 @@
 
 		.project-counter__item {
 			gap: 0;
+			background-color: var(--wp--preset--color--gray-100);
+			border-radius: var(--rounder);
 
 			.project-counter__content {
 				line-height: 96px;
@@ -45,5 +47,12 @@
 				}
 			}
 		}
+	}
+}
+
+/* Editor */
+.block-editor-iframe__html {
+	.project-counter {
+		padding: 10px;
 	}
 }

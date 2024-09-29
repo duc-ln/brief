@@ -34,7 +34,7 @@
 		position: relative;
 		padding: 31px 20px 22px 20px;
 		border: 2px solid var(--wp--preset--color--gray-800);
-		border-radius: 10px;
+		border-radius: var(--rounder);
 		row-gap: 12px !important;
 		align-items: center;
 
@@ -49,7 +49,7 @@
 			left: 10px;
 			right: 10px;
 			bottom: 10px;
-			border-radius: 10px;
+			border-radius: var(--rounder);
 			background: linear-gradient(270deg, #ffffff 0%, #e5e5e5 100%);
 			z-index: -1;
 		}
@@ -74,7 +74,7 @@
 		align-items: flex-end;
 	}
 
-	@media (max-width: 600px) {
+	@media (max-width: 767px) {
 		.media-text-grid__item {
 			grid-column: span 2;
 		}
@@ -101,7 +101,7 @@
 			width: 50%;
 			max-width: 410px;
 			max-height: 410px;
-			border-radius: 10px;
+			border-radius: var(--rounder);
 		}
 
 		figure {

@@ -1,5 +1,4 @@
 .product-list {
-	--rounder: 8px;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -9,7 +8,7 @@
 	&__title {
 		line-height: var(--line-height-max);
 
-		@media (max-width: 600px) {
+		@media (max-width: 767px) {
 			line-height: var(--line-height-xl);
 		}
 	}

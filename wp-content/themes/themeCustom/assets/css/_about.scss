@@ -13,7 +13,7 @@
 			text-align: center;
 		}
 
-		@media (max-width: 600px) {
+		@media (max-width: 767px) {
 			padding: 15px;
 			strong {
 				font-size: var(--wp--preset--font-size--s);
@@ -38,7 +38,7 @@
 			line-height: var(--line-height-s) !important;
 		}
 
-		@media (max-width: 600px) {
+		@media (max-width: 767px) {
 			.faq-item__content-child-title {
 				line-height: var(--line-height-xl) !important;
 				margin-bottom: 10px !important;

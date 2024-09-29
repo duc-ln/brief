@@ -44,9 +44,9 @@
 			line-height: var(--line-height--xl);
 			pointer-events: none !important;
 			margin-top: 54px;
-            a {
-                padding: 0 !important;
-            }
+			a {
+				padding: 0 !important;
+			}
 		}
 
 		.wp-block-navigation-link {
@@ -78,7 +78,7 @@
 				opacity: 1;
 				right: var(--width-content);
 
-				@media (max-width: 600px) {
+				@media (max-width: 767px) {
 					display: none !important;
 				}
 			}
