@@ -57,6 +57,7 @@
 html {
 	font-size: 18px;
 	line-height: var(--line-height-s);
+	overflow-x: hidden;
 	body {
 		.wp-block-template-part {
 			width: 100%;
