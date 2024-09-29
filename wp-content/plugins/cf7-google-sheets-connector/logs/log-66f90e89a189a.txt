@@ -1,0 +1,44 @@
+Log created at 2024-09-29 08:23:3729 September 2024 08:23:37 	 PHP 8.1.10Array
+(
+    [ERROR_MSG] => Auth, Error fetching OAuth2 access token, message: cURL error 35: OpenSSL SSL_connect: Connection was reset in connection to oauth2.googleapis.com:443  (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://oauth2.googleapis.com/token
+    [TRACE_STK] => #0 C:\laragon\www\interior\wp-content\plugins\cf7-google-sheets-connector\includes\class-gs-service.php(656): CF7GSC_googlesheet->auth()
+#1 C:\laragon\www\interior\wp-includes\class-wp-hook.php(324): Gs_Connector_Service->cf7_save_to_google_sheets(Object(WPCF7_ContactForm))
+#2 C:\laragon\www\interior\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#3 C:\laragon\www\interior\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\laragon\www\interior\wp-content\plugins\contact-form-7\includes\submission.php(127): do_action('wpcf7_mail_sent', Object(WPCF7_ContactForm))
+#5 [internal function]: WPCF7_Submission->{closure}()
+#6 C:\laragon\www\interior\wp-content\plugins\contact-form-7\includes\l10n.php(147): call_user_func(Object(Closure))
+#7 C:\laragon\www\interior\wp-content\plugins\contact-form-7\includes\submission.php(137): wpcf7_switch_locale('en_US', Object(Closure))
+#8 C:\laragon\www\interior\wp-content\plugins\contact-form-7\includes\submission.php(35): WPCF7_Submission->proceed()
+#9 C:\laragon\www\interior\wp-content\plugins\contact-form-7\includes\contact-form.php(1075): WPCF7_Submission::get_instance(Object(WPCF7_ContactForm), Array)
+#10 C:\laragon\www\interior\wp-content\plugins\contact-form-7\includes\rest-api.php(365): WPCF7_ContactForm->submit()
+#11 C:\laragon\www\interior\wp-includes\rest-api\class-wp-rest-server.php(1230): WPCF7_REST_Controller->create_feedback(Object(WP_REST_Request))
+#12 C:\laragon\www\interior\wp-includes\rest-api\class-wp-rest-server.php(1063): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/contact-form-7...', Array, NULL)
+#13 C:\laragon\www\interior\wp-includes\rest-api\class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#14 C:\laragon\www\interior\wp-includes\rest-api.php(420): WP_REST_Server->serve_request('/contact-form-7...')
+#15 C:\laragon\www\interior\wp-includes\class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#16 C:\laragon\www\interior\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#17 C:\laragon\www\interior\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#18 C:\laragon\www\interior\wp-includes\class-wp.php(418): do_action_ref_array('parse_request', Array)
+#19 C:\laragon\www\interior\wp-includes\class-wp.php(813): WP->parse_request('')
+#20 C:\laragon\www\interior\wp-includes\functions.php(1336): WP->main('')
+#21 C:\laragon\www\interior\wp-blog-header.php(16): wp()
+#22 C:\laragon\www\interior\index.php(17): require('C:\\laragon\\www\\...')
+#23 {main}
+)
+29 September 2024 08:35:14 	 PHP 8.1.10 	 CF7GSC_googlesheet::gsheet_get_google_account Error in fetching user info: 
+ {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+        "domain": "global",
+        "reason": "unauthorized"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+ 
