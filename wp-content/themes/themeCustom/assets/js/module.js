@@ -54,70 +54,48 @@ class Helpers {
 		scopeSelector,
 		activeEventSelector,
 		imgSelector,
-		destinationSelector,
 		itemSelector,
+		destinationSelector,
 	}) {
 		const scopeElement = document.querySelector(scopeSelector);
 		if (!scopeElement) return;
+		const activeElements = scopeElement.querySelectorAll(activeEventSelector);
+		const imageElements = scopeElement.querySelectorAll(imgSelector);
 		const itemElements = scopeElement.querySelectorAll(itemSelector);
-		const activeElements =
-			scopeElement.querySelectorAll(activeEventSelector);
-		const imageElments = scopeElement.querySelectorAll(imgSelector);
-		const destinationElement =
-			scopeElement.querySelector(destinationSelector);
+		const destinationElements = scopeElement.querySelectorAll(destinationSelector);
 
 		if (
-			itemElements.length <= 0 ||
 			activeElements.length <= 0 ||
-			imageElments.length <= 0 ||
-			!destinationElement
+			imageElements.length <= 0 ||
+			itemElements.length <= 0 ||
+			destinationElements.length <= 0
 		)
 			return;
 
-		function transalteImage(index) {
-			if (window.innerWidth <= 1439) return;
-			let imageEl = imageElments[index];
-			if (!imageEl) {
-				const noImageEl = document.createElement("p");
-				noImageEl.innerText = "No image";
-				noImageEl.classList.add("no-image");
-				imageEl = noImageEl;
-			}
-			if (destinationElement.firstChild)
-				destinationElement.removeChild(destinationElement.firstChild);
-			destinationElement.appendChild(imageEl);
+
+
+		function translateImage(index) {
+			if (window.innerWidth >= 1024) return
+			let imageEl = imageElements[index];
+
+			if (!imageEl || !destinationElements) return
+			destinationElements[index].appendChild(imageEl);
 		}
 
 		if (activeElements[0]) {
 			activeElements[0].classList.add("active");
-			itemElements[0].classList.add("active");
-			if (window.innerWidth > 1439) transalteImage(0);
+			imageElements[0].classList.add("active");
 		}
 
-		window.addEventListener("resize", () => {
-			if (window.innerWidth > 1439 && !destinationElement.firstChild) {
-				const activeElement = [...itemElements].find((item) =>
-					item.matches(".active"),
-				);
-				const imageActiveElement =
-					activeElement.querySelector(imgSelector);
-				destinationElement.appendChild(imageActiveElement);
-			}
-			if (window.innerWidth <= 1439 && destinationElement.firstChild) {
-				itemElements.forEach((item, index) => {
-					if (!item.querySelector(imgSelector)) {
-						item.appendChild(imageElments[index]);
-					}
-				});
-			}
-		});
 		activeElements.forEach((activeEl, index) => {
+			translateImage(index);
+
 			activeEl.addEventListener("click", () => {
 				Helpers.removeAllActive(activeElements);
-				Helpers.removeAllActive(itemElements);
 				activeEl.classList.add("active");
-				itemElements[index].classList.add("active");
-				transalteImage(index);
+
+				Helpers.removeAllActive(imageElements);
+				imageElements[index].classList.add("active");
 			});
 		});
 	}
@@ -243,13 +221,15 @@ const Modules = {
 			".ourServices__main-images .images-item",
 			["mouseover"],
 		);
+
 		Helpers.faqDisplayHandle({
-			scopeSelector: "#faq",
-			activeEventSelector: ".faq-item__content-title",
-			imgSelector: ".faq-item__content-image",
-			destinationSelector: ".faq-image-desktop",
-			itemSelector: ".faq-item__title-grid",
-		});
+			scopeSelector: ".faq",
+			activeEventSelector: ".faqItem",
+			itemSelector: ".faqItem",
+			imgSelector: ".faq__main-images .images-item",
+			destinationSelector: ".faqItem__main"
+		})
+
 		Helpers.handleSlider({
 			scopeSelector: "#our-team",
 			sliderSelector: ".our-team__members",
