@@ -10,9 +10,9 @@ class Helpers {
 	}
 
 	static animateCounter(obj, duration) {
-		const start = 0
-		const end = Number(obj.innerText)
-		if (Number.isNaN(end)) return
+		const start = 0;
+		const end = Number(obj.innerText);
+		if (Number.isNaN(end)) return;
 		let startTimestamp = null;
 		const step = (timestamp) => {
 			if (!startTimestamp) startTimestamp = timestamp;
@@ -59,10 +59,12 @@ class Helpers {
 	}) {
 		const scopeElement = document.querySelector(scopeSelector);
 		if (!scopeElement) return;
-		const activeElements = scopeElement.querySelectorAll(activeEventSelector);
+		const activeElements =
+			scopeElement.querySelectorAll(activeEventSelector);
 		const imageElements = scopeElement.querySelectorAll(imgSelector);
 		const itemElements = scopeElement.querySelectorAll(itemSelector);
-		const destinationElements = scopeElement.querySelectorAll(destinationSelector);
+		const destinationElements =
+			scopeElement.querySelectorAll(destinationSelector);
 
 		if (
 			activeElements.length <= 0 ||
@@ -72,13 +74,11 @@ class Helpers {
 		)
 			return;
 
-
-
 		function translateImage(index) {
-			if (window.innerWidth >= 1024) return
+			if (window.innerWidth >= 1024) return;
 			let imageEl = imageElements[index];
 
-			if (!imageEl || !destinationElements) return
+			if (!imageEl || !destinationElements) return;
 			destinationElements[index].appendChild(imageEl);
 		}
 
@@ -122,10 +122,12 @@ class Helpers {
 
 		sliderItemElements.forEach((sliderItemElement) => {
 			sliderItemElement.style.width = `${sliderWidth / showItemCount}px`;
-			sliderItemElement.style.minWidth = `${sliderWidth / showItemCount
-				}px`;
-			sliderItemElement.style.maxWidth = `${sliderWidth / showItemCount
-				}px`;
+			sliderItemElement.style.minWidth = `${
+				sliderWidth / showItemCount
+			}px`;
+			sliderItemElement.style.maxWidth = `${
+				sliderWidth / showItemCount
+			}px`;
 			sliderItemElement.style.opacity = "1";
 		});
 
@@ -202,12 +204,15 @@ class Helpers {
 			else showItemCount = 4;
 			sliderElement.style.width = sliderWidth + "px";
 			sliderItemElements.forEach((sliderItemElement) => {
-				sliderItemElement.style.width = `${sliderWidth / showItemCount
-					}px`;
-				sliderItemElement.style.minWidth = `${sliderWidth / showItemCount
-					}px`;
-				sliderItemElement.style.maxWidth = `${sliderWidth / showItemCount
-					}px`;
+				sliderItemElement.style.width = `${
+					sliderWidth / showItemCount
+				}px`;
+				sliderItemElement.style.minWidth = `${
+					sliderWidth / showItemCount
+				}px`;
+				sliderItemElement.style.maxWidth = `${
+					sliderWidth / showItemCount
+				}px`;
 			});
 			renderCounter();
 		});
@@ -227,8 +232,8 @@ const Modules = {
 			activeEventSelector: ".faqItem",
 			itemSelector: ".faqItem",
 			imgSelector: ".faq__main-images .images-item",
-			destinationSelector: ".faqItem__main"
-		})
+			destinationSelector: ".faqItem__main",
+		});
 
 		Helpers.handleSlider({
 			scopeSelector: "#our-team",
@@ -258,11 +263,13 @@ const Modules = {
 				(entries) => {
 					entries.forEach((entry) => {
 						if (entry.intersectionRatio >= 0.5) {
-							const objects = projectConter.querySelectorAll('.project-counter__content-number')
+							const objects = projectConter.querySelectorAll(
+								".project-counter__content-number",
+							);
 							if (objects.length > 0) {
-								[...objects].forEach(obj => {
-									Helpers.animateCounter(obj, 3000)
-								})
+								[...objects].forEach((obj) => {
+									Helpers.animateCounter(obj, 3000);
+								});
 							}
 							observer.unobserve(entry.target);
 						}
