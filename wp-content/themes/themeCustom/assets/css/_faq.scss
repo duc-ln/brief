@@ -2,16 +2,15 @@
 	width: 100%;
 
 	&__main {
-		display: grid;
-		grid-template-columns: 1fr 2fr;
-		grid-template-rows: auto;
 		gap: 32px;
+		display: flex;
 
 		@media (max-width: 1023px) {
 			display: block !important;
 		}
 
 		&-list {
+			flex: 1;
 			width: 100%;
 
 			.faq__heading {
@@ -78,6 +77,7 @@
 		}
 
 		&-images {
+			flex: 2;
 			width: 100%;
 			margin-block-start: unset !important;
 			position: relative;
