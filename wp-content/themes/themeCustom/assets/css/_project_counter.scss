@@ -11,6 +11,7 @@
 		gap: var(--grid-gap-content);
 
 		.project-counter__item {
+			padding: 32px;
 			gap: 0;
 			background-color: var(--wp--preset--color--gray-100);
 			border-radius: var(--rounder);
@@ -31,6 +32,9 @@
 
 			figure {
 				margin-bottom: 24px;
+				width: 64px;
+				height: 64px;
+				min-width: 64px;
 			}
 		}
 

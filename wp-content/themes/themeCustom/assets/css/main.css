@@ -2564,6 +2564,7 @@ header.active {
 }
 #project-counter .project-counter__main .project-counter__item,
 .project-counter .project-counter__main .project-counter__item {
+  padding: 32px;
   gap: 0;
   background-color: var(--wp--preset--color--gray-100);
   border-radius: var(--rounder);
@@ -2585,6 +2586,9 @@ header.active {
 #project-counter .project-counter__main .project-counter__item figure,
 .project-counter .project-counter__main .project-counter__item figure {
   margin-bottom: 24px;
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
 }
 @media (max-width: 1023px) {
   #project-counter .project-counter__main .project-counter__item,
