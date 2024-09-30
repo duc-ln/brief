@@ -17,7 +17,7 @@
             <!-- /wp:group -->
 
             <!-- wp:image {"id":362,"sizeSlug":"full","linkDestination":"none","style":{"layout":{"columnSpan":6}}} -->
-            <figure class="wp-block-image size-full"><img src="http://interior.test:3000/wp-content/uploads/2024/09/image-12.png" alt="" class="wp-image-362" /></figure>
+            <figure class="wp-block-image size-full"><img src="https://phinest.studio/wp-content/assets/images/image-9.png" alt="" class="wp-image-362" /></figure>
             <!-- /wp:image -->
         </div>
         <!-- /wp:group -->
@@ -47,7 +47,7 @@
             <!-- /wp:group -->
 
             <!-- wp:image {"id":362,"sizeSlug":"full","linkDestination":"none","style":{"layout":{"columnSpan":6}}} -->
-            <figure class="wp-block-image size-full"><img src="http://interior.test:3000/wp-content/uploads/2024/09/image-12.png" alt="" class="wp-image-362" /></figure>
+            <figure class="wp-block-image size-full"><img src="https://phinest.studio/wp-content/assets/images/image-8.png" alt="" class="wp-image-362" /></figure>
             <!-- /wp:image -->
         </div>
         <!-- /wp:group -->
