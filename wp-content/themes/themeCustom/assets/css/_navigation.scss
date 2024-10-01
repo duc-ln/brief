@@ -42,11 +42,11 @@
 			color: var(--wp--preset--color--gray-800);
 			font-size: var(--wp--preset--font-size--xl);
 			line-height: var(--line-height--xl);
-			pointer-events: none !important;
 			margin-top: 54px;
 
 			& > .wp-block-navigation-item__content {
 				text-transform: uppercase;
+				pointer-events: none !important;
 				color: var(--wp--preset--color--gray-800) !important;
 			}
 

@@ -1928,11 +1928,11 @@ header.active {
   color: var(--wp--preset--color--gray-800);
   font-size: var(--wp--preset--font-size--xl);
   line-height: var(--line-height--xl);
-  pointer-events: none !important;
   margin-top: 54px;
 }
 .navigation .wp-block-navigation__responsive-container .navigation__label > .wp-block-navigation-item__content {
   text-transform: uppercase;
+  pointer-events: none !important;
   color: var(--wp--preset--color--gray-800) !important;
 }
 .navigation .wp-block-navigation__responsive-container .navigation__label ul {
@@ -3057,7 +3057,7 @@ header.active {
   flex-direction: column;
   flex-wrap: wrap;
   margin: -9px;
-  height: 100dvh;
+  height: max-content;
   max-height: 900px;
   gap: unset !important;
   overflow-x: auto;
