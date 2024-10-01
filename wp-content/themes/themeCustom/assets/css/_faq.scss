@@ -109,8 +109,10 @@
 				}
 
 				.block-editor-block-list__block {
-					width: 100%;
-					height: 100%;
+					.wp-block-icb-image-compare .icbImageCompare .comparison-slider {
+						width: unset !important;
+						height: unset !important;
+					}
 				}
 
 				.wp-block-icb-image-compare {
