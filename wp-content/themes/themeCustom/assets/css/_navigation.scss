@@ -44,6 +44,17 @@
 			line-height: var(--line-height--xl);
 			pointer-events: none !important;
 			margin-top: 54px;
+
+			& > .wp-block-navigation-item__content {
+				text-transform: uppercase;
+				color: var(--wp--preset--color--gray-800) !important;
+			}
+
+			ul {
+				margin: 0 !important;
+				padding: 0 !important;
+				row-gap: 18px !important;
+			}
 			a {
 				padding: 0 !important;
 			}
@@ -54,6 +65,7 @@
 			font-size: var(--wp--preset--font-size--r);
 			line-height: var(--line-height--r);
 			font-weight: 500;
+			padding: 12px 0 !important;
 		}
 
 		& .wp-block-navigation__responsive-close::after {

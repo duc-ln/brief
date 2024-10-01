@@ -12,12 +12,9 @@
 <!-- wp:group {"className":"media-text-grid","layout":{"type":"grid","columnCount":2,"minimumColumnWidth":null}} -->
 <div class="wp-block-group media-text-grid"><!-- wp:group {"className":"media-text-grid__item","layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
     <div class="wp-block-group media-text-grid__item"><!-- wp:group {"className":"media-text-grid__image","layout":{"type":"default"}} -->
-        <div class="wp-block-group media-text-grid__image"><!-- wp:group {"className":"media-text-grid__image-emty","style":{"layout":{"columnSpan":3}},"backgroundColor":"gray-500","layout":{"type":"default"}} -->
-            <div class="wp-block-group media-text-grid__image-emty has-gray-500-background-color has-background"></div>
-            <!-- /wp:group -->
-
+        <div class="wp-block-group media-text-grid__image">
             <!-- wp:image {"id":362,"sizeSlug":"full","linkDestination":"none","style":{"layout":{"columnSpan":6}}} -->
-            <figure class="wp-block-image size-full"><img src="https://phinest.studio/wp-content/assets/images/image-9.png" alt="" class="wp-image-362" /></figure>
+            <figure class="wp-block-image size-full"><img src="" alt="" class="wp-image-362" /></figure>
             <!-- /wp:image -->
         </div>
         <!-- /wp:group -->
@@ -42,12 +39,9 @@
         <!-- /wp:paragraph -->
 
         <!-- wp:group {"className":"media-text-grid__image","layout":{"type":"constrained"}} -->
-        <div class="wp-block-group media-text-grid__image"><!-- wp:group {"className":"media-text-grid__image-emty","style":{"layout":{"columnSpan":3}},"backgroundColor":"gray-500","layout":{"type":"default"}} -->
-            <div class="wp-block-group media-text-grid__image-emty has-gray-500-background-color has-background"></div>
-            <!-- /wp:group -->
-
+        <div class="wp-block-group media-text-grid__image">
             <!-- wp:image {"id":362,"sizeSlug":"full","linkDestination":"none","style":{"layout":{"columnSpan":6}}} -->
-            <figure class="wp-block-image size-full"><img src="https://phinest.studio/wp-content/assets/images/image-8.png" alt="" class="wp-image-362" /></figure>
+            <figure class="wp-block-image size-full"><img src="" alt="" class="wp-image-362" /></figure>
             <!-- /wp:image -->
         </div>
         <!-- /wp:group -->

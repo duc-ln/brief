@@ -58,3 +58,11 @@
 	-webkit-text-stroke: 1px black;
 	text-stroke: 1px black;
 }
+
+.wp-block-gallery {
+	gap: 18px !important;
+	figure,img {
+		max-height: 448px !important;
+		border-radius: var(--rounder);
+	}
+}
