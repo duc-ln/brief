@@ -1792,7 +1792,7 @@ button.swiper-pagination-bullet {
   margin-block: unset !important;
 }
 .generate-slider__image img {
-  object-fit: contain;
+  object-fit: cover;
 }
 .generate-slider__content {
   position: absolute;
