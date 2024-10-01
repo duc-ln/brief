@@ -2369,21 +2369,67 @@ header.active {
   }
 }
 .faq__main-images .images-item {
+  width: 100%;
+  height: 100%;
+  display: none;
+  overflow: hidden;
+}
+.faq__main-images .images-item iframe,
+.faq__main-images .images-item .wp-block-video {
+  width: 100%;
+  height: 100%;
+}
+.faq__main-images .images-item iframe div,
+.faq__main-images .images-item .wp-block-video div {
+  width: 100%;
+  height: 100%;
+}
+.faq__main-images .images-item iframe video,
+.faq__main-images .images-item .wp-block-video video {
+  width: 100%;
+  height: 100%;
+}
+.faq__main-images .images-item .block-editor-block-list__block {
+  width: 100%;
+  height: 100%;
+}
+.faq__main-images .images-item .wp-block-icb-image-compare {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   max-height: 100%;
-  display: none;
   margin-block-start: unset !important;
   animation: showAnimation ease-in-out 0.3s;
 }
-.faq__main-images .images-item .components-resizable-box__container {
+.faq__main-images .images-item .wp-block-icb-image-compare .icbImageCompare {
+  width: 100% !important;
+  height: 100% !important;
+}
+.faq__main-images .images-item .wp-block-icb-image-compare .icbImageCompare .comparison-slider {
+  width: 100% !important;
+  height: 100% !important;
+}
+.faq__main-images .images-item .wp-block-icb-image-compare .icbImageCompare .comparison-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.faq__main-images .images-item .wp-block-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  margin-block-start: unset !important;
+  animation: showAnimation ease-in-out 0.3s;
+}
+.faq__main-images .images-item .wp-block-image .components-resizable-box__container {
   width: 100% !important;
   height: 100% !important;
   max-height: 100% !important;
 }
-.faq__main-images .images-item img {
+.faq__main-images .images-item .wp-block-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
