@@ -1900,6 +1900,7 @@ header.active {
   height: 100vh !important;
   left: unset !important;
   overflow: unset !important;
+  overflow-y: auto !important;
   animation: unset !important;
   right: var(--spacing-content) !important;
   transition-property: transform;
@@ -2757,6 +2758,9 @@ header.active {
   line-height: var(--line-height-s);
   color: var(--wp--preset--color--gray-800);
   font-weight: 400;
+}
+.our-team .wps-container .wps-carousel--inner .wpspeedo-team--single .wps-team--member-details p {
+  margin: 0 !important;
 }
 .our-team .wps-container .wps-carousel--inner .team-member--thumbnail {
   box-shadow: unset !important;

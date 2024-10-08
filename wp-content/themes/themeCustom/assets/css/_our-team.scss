@@ -134,6 +134,10 @@
 					line-height: var(--line-height-s);
 					color: var(--wp--preset--color--gray-800);
 					font-weight: 400;
+
+					p {
+						margin: 0 !important; 
+					}
 				}
 			}
 
